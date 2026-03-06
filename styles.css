@@ -1,0 +1,456 @@
+/* ==================== */
+/*   DESIGN TOKENS    */
+/* ==================== */
+:root {
+  /* ─────────────────────────────────────────
+     COLORS
+  ───────────────────────────────────────── */
+
+  /* White & Black */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Navy */
+  --color-navy-950: #0e1323;
+  --color-navy-900: #1c204b;
+  --color-navy-800: #33397a;
+  --color-navy-200: #bbc0ff;
+
+  /* Orange */
+  --color-orange-300: #ff8b64;
+
+  /* Purple */
+  --color-purple-700: #7335d2;
+  --color-purple-600: #5747ea;
+  --color-purple-500: #7078c9;
+
+  /* Blue */
+  --color-blue-300: #55c2e6;
+
+  /* Pink */
+  --color-pink-400: #ff5e7d;
+
+  /* Green */
+  --color-green-400: #4bcf82;
+
+  /* Yellow */
+  --color-yellow-300: #f1c758;
+
+  /* Grey */
+  --color-grey-200: #d8d8d6;
+
+  /* ─────────────────────────────────────────
+     TYPOGRAPHY — Font Family
+  ───────────────────────────────────────── */
+
+  --font-family-base: "Rubik", sans-serif;
+
+  /* ─────────────────────────────────────────
+     TYPOGRAPHY — Font Weights
+  ───────────────────────────────────────── */
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* ─────────────────────────────────────────
+     TYPOGRAPHY — Text Presets
+     preset-1 → preset-4 : Rubik Light
+     preset-5m            : Rubik Medium
+     preset-5r            : Rubik Regular
+     preset-6             : Rubik Regular
+  ───────────────────────────────────────── */
+
+  /* Preset 1 — 56px / 66px */
+  --text-preset-1-size: 56px;
+  --text-preset-1-height: 66px;
+  --text-preset-1-spacing: 0px;
+  --text-preset-1-weight: var(--font-weight-light);
+
+  /* Preset 2 — 40px / 47px */
+  --text-preset-2-size: 40px;
+  --text-preset-2-height: 47px;
+  --text-preset-2-spacing: 0px;
+  --text-preset-2-weight: var(--font-weight-light);
+
+  /* Preset 3 — 32px / 38px */
+  --text-preset-3-size: 32px;
+  --text-preset-3-height: 38px;
+  --text-preset-3-spacing: 0px;
+  --text-preset-3-weight: var(--font-weight-light);
+
+  /* Preset 4 — 24px / 28px */
+  --text-preset-4-size: 24px;
+  --text-preset-4-height: 28px;
+  --text-preset-4-spacing: 0px;
+  --text-preset-4-weight: var(--font-weight-light);
+
+  /* Preset 5 Medium — 18px / 21px */
+  --text-preset-5m-size: 18px;
+  --text-preset-5m-height: 21px;
+  --text-preset-5m-spacing: 0px;
+  --text-preset-5m-weight: var(--font-weight-medium);
+
+  /* Preset 5 Regular — 18px / 21px */
+  --text-preset-5r-size: 18px;
+  --text-preset-5r-height: 21px;
+  --text-preset-5r-spacing: 0px;
+  --text-preset-5r-weight: var(--font-weight-regular);
+
+  /* Preset 6 — 15px / 18px */
+  --text-preset-6-size: 15px;
+  --text-preset-6-height: 18px;
+  --text-preset-6-spacing: 0px;
+  --text-preset-6-weight: var(--font-weight-regular);
+}
+
+/* ─────────────────────────────────────────
+   OPTIONAL UTILITY CLASSES
+   (apply the presets via a single class)
+───────────────────────────────────────── */
+
+.text-preset-1 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-1-size);
+  line-height: var(--text-preset-1-height);
+  letter-spacing: var(--text-preset-1-spacing);
+  font-weight: var(--text-preset-1-weight);
+}
+
+.text-preset-2 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-2-size);
+  line-height: var(--text-preset-2-height);
+  letter-spacing: var(--text-preset-2-spacing);
+  font-weight: var(--text-preset-2-weight);
+}
+
+.text-preset-3 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-3-size);
+  line-height: var(--text-preset-3-height);
+  letter-spacing: var(--text-preset-3-spacing);
+  font-weight: var(--text-preset-3-weight);
+}
+
+.text-preset-4 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-4-size);
+  line-height: var(--text-preset-4-height);
+  letter-spacing: var(--text-preset-4-spacing);
+  font-weight: var(--text-preset-4-weight);
+}
+
+.text-preset-5-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-5m-size);
+  line-height: var(--text-preset-5m-height);
+  letter-spacing: var(--text-preset-5m-spacing);
+  font-weight: var(--text-preset-5m-weight);
+}
+
+.text-preset-5-regular {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-5r-size);
+  line-height: var(--text-preset-5r-height);
+  letter-spacing: var(--text-preset-5r-spacing);
+  font-weight: var(--text-preset-5r-weight);
+}
+
+.text-preset-6 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-6-size);
+  line-height: var(--text-preset-6-height);
+  letter-spacing: var(--text-preset-6-spacing);
+  font-weight: var(--text-preset-6-weight);
+}
+
+/* ==================== */
+/*    BASE STYLES    */
+/* ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-navy-950);
+  display: flex;
+  justify-content: center;
+}
+
+/* Mobile */
+
+.container {
+  min-width: 20.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  color: var(--color-white);
+}
+.container > * + * {
+  margin-top: 1.5rem;
+}
+/* ==================== */
+/*    Header   (profile + navigation   */
+/* ==================== */
+
+.page__header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-navy-900);
+  border-radius: 2rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--color-purple-600);
+  border-radius: 2rem;
+  padding: 2rem;
+  width: 100%;
+}
+.profile__card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile__picture {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.profile__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+.profile__list li {
+  cursor: pointer;
+  color: var(--color-purple-500);
+  transition: color 0.3s ease;
+}
+
+.profile__list li:hover :active {
+  color: var(--color-white);
+}
+
+/* ==================== */
+/*    Body  (stats cards)  */
+/* ==================== */
+
+.report__card {
+  border-radius: 2rem;
+  padding-top: 2rem;
+  background-color: var(--color-navy-900);
+}
+.report__card--content > * + * {
+  margin-top: 1.5rem;
+}
+
+.report__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.report__body {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.report__title {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-5m-size);
+  line-height: var(--text-preset-5m-height);
+  letter-spacing: var(--text-preset-5m-spacing);
+  font-weight: var(--text-preset-5m-weight);
+}
+
+.report__current {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-3-size);
+  line-height: var(--text-preset-3-height);
+  letter-spacing: var(--text-preset-3-spacing);
+  font-weight: var(--text-preset-3-weight);
+}
+
+.report__previous {
+  font-family: var(--font-family-base);
+  font-size: var(--text-preset-6-size);
+  line-height: var(--text-preset-6-height);
+  letter-spacing: var(--text-preset-6-spacing);
+  font-weight: var(--text-preset-6-weight);
+  color: var(--color-navy-200);
+}
+
+.report__card {
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position-x: 95%;
+  background-position-y: top;
+}
+.report__card--work {
+  background-color: var(--color-orange-300);
+  background-image: url("./images/icon-work.svg");
+}
+.report__card--play {
+  background-color: var(--color-blue-300);
+  background-image: url("./images/icon-play.svg");
+}
+.report__card--study {
+  background-color: var(--color-pink-400);
+  background-image: url("./images/icon-study.svg");
+}
+.report__card--exercise {
+  background-color: var(--color-green-400);
+  background-image: url("./images/icon-exercise.svg");
+}
+.report__card--social {
+  background-color: var(--color-purple-700);
+  background-image: url("./images/icon-social.svg");
+}
+.report__card--self-care {
+  background-color: var(--color-yellow-300);
+  background-image: url("./images/icon-self-care.svg");
+}
+
+.report__card--content {
+  background-color: var(--color-navy-900);
+  border-radius: 2rem;
+  padding: 2rem;
+  height: 100%;
+}
+
+/* ==================== */
+/*   tablet  */
+/* ==================== */
+@media (min-width: 47rem) {
+  .container {
+    max-width: 40rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+  }
+}
+
+
+.report {
+  display: contents;
+}
+.report__body {
+  display: flex;
+    flex-direction: column;
+}
+.page__header {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+
+.report__card--work {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.report__card--play {
+  grid-column: 2;
+  grid-row: 2;
+}
+.report__card--study {
+  grid-column: 3;
+  grid-row: 2;
+}
+.report__card--exercise {
+  grid-column: 1;
+  grid-row: 3;
+}
+.report__card--social {
+  grid-column: 2;
+  grid-row: 3;
+}
+.report__card--self-care {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+/* ==================== */
+/*   desktop  */
+/* ==================== */
+
+@media (min-width: 90rem) {
+
+  .container {
+    max-width: 70rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+ 
+
+  .page__header {
+    grid-column: 1;
+    grid-row: 1/4;
+    height: 100%;
+  }
+
+  .profile {
+    flex: 1;
+  }
+
+  .profile__card {
+    max-width: 16rem;
+    flex-direction: column;
+    align-items: flex-start;
+    height : 100%;
+    gap: 1rem;
+  }
+  
+  .profile__list {
+    flex-direction: column;
+    gap: 0.5rem;
+    
+  }
+  .report__card--work {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .report__card--play {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .report__card--study {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .report__card--exercise {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .report__card--social {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .report__card--self-care {
+    grid-column: 4;
+    grid-row: 2;
+  }
+}

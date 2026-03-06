@@ -1,80 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Time tracking Dashboard</title>
 
-  Report for
-  Jeremy Robson
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
-  Daily
-  Weekly
-  Monthly
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+  <body>
+    <main class="container">
+      <header class="page__header">
+        <section class="profile">
+          <div class="profile__card">
+            <img
+              src="./images/image-jeremy.png"
+              alt="Jeremy Robson's profile picture"
+              class="profile__picture"
+            />
+            <div class="profile__info">
+              <p class="profile__report text-preset-6">Report for</p>
+              <h1 class="profile__name text-preset-4">Jeremy Robson</h1>
+            </div>
+          </div>
+        </section>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+        <nav class="profile__nav">
+          <ul class="profile__list">
+            <li class="profile__item profile__item--active">Daily</li>
+            <li class="profile__item">Weekly</li>
+            <li class="profile__item">Monthly</li>
+          </ul>
+        </nav>
+      </header>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+      <section class="report">
+        <div class="report__card report__card--work">
+          <div class="report__card--content">
+          <div class="report__header">
+            <h2 class="report__title">Work</h2>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="three dots icon"
+              class="report__icon"
+            />
+          </div>
+          <div class="report__body">
+            <p class="report__current">5hrs</p>
+            <p class="report__previous">Previous - 7hrs</p>
+          </div>
+          </div>
+        </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+        <div class="report__card report__card--play">
+          <div class="report__card--content">
+          <div class="report__header">
+            <h2 class="report__title">Play</h2>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="three dots icon"
+              class="report__icon"
+            />
+          </div>
+          <div class="report__body">
+            <p class="report__current">1hr</p>
+            <p class="report__previous">Previous - 2hrs</p>
+          </div>
+          </div>
+        </div>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+        <div class="report__card report__card--study">
+          <div class="report__card--content">
+          <div class="report__header">
+            <h2 class="report__title">Study</h2>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="three dots icon"
+              class="report__icon"
+            />
+          </div>
+          <div class="report__body">
+            <p class="report__current">0hrs</p>
+            <p class="report__previous">Previous - 1hr</p>
+          </div>
+          </div>
+        </div>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+        <div class="report__card report__card--exercise">
+          <div class="report__card--content">
+          <div class="report__header">
+            <h2 class="report__title">Exercise</h2>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="three dots icon"
+              class="report__icon"
+            />
+          </div>
+          <div class="report__body">
+            <p class="report__current">1hr</p>
+            <p class="report__previous">Previous - 1hr</p>
+          </div>
+          </div>
+          </div>
+        </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="report__card report__card--social">
+          <div class="report__card--content">
+          <div class="report__header">
+            <h2 class="report__title">Social</h2>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="three dots icon"
+              class="report__icon"
+            />
+          </div>
+          <div class="report__body">
+            <p class="report__current">1hr</p>
+            <p class="report__previous">Previous - 3hrs</p>
+          </div>
+          </div>
+          
+        </div>
+
+        <div class="report__card report__card--self-care">
+          <div class="report__card--content">
+          <div class="report__header">
+            <h2 class="report__title">Self Care</h2>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="three dots icon"
+              class="report__icon"
+            />
+          </div>
+          <div class="report__body">
+            <p class="report__current">0hrs</p>
+            <p class="report__previous">Previous - 1hr</p>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
