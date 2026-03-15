@@ -20,7 +20,7 @@ fetch('./data.json')
     // Update data on click
     document.querySelectorAll('.profile__item').forEach(item => {
       item.addEventListener('click', () => {
-        const timeframe = item.textContent.toLowerCase()
+        const timeframe = item.textContent.trim().toLowerCase()
         document.querySelectorAll('.profile__item').forEach(i => {
           i.classList.remove('profile__item--active')
           i.setAttribute('aria-selected', 'false')

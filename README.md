@@ -11,7 +11,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
- 
   - [AI Collaboration](#ai-collaboration)
 
 
@@ -46,6 +45,11 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - vanilla JS
+
+### What I learnt
+One of the many things I learnt - I reformatted the HTML to 'clean up', as one of the final steps before my final commit. The HTML reformatting added whitespace inside the <li> elements. Javascript stopped working - 
+
+Fix: add .trim() to strip the whitespace.
 
 ### AI Collaboration
 
