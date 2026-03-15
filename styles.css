@@ -48,10 +48,10 @@
   /* ─────────────────────────────────────────
      TYPOGRAPHY — Font Weights
   ───────────────────────────────────────── */
-
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
+  --font-weight-extralight: 100;
+  --font-weight-light: 200;
+  --font-weight-regular: 300;
+  --font-weight-medium: 400;
 
   /* ─────────────────────────────────────────
      TYPOGRAPHY — Text Presets
@@ -68,10 +68,10 @@
   --text-preset-1-weight: var(--font-weight-light);
 
   /* Preset 2 — 40px / 47px */
-  --text-preset-2-size: 40px;
+  --text-preset-2-size: 38px;
   --text-preset-2-height: 47px;
   --text-preset-2-spacing: 0px;
-  --text-preset-2-weight: var(--font-weight-light);
+  --text-preset-2-weight: var(--font-weight-extralight);
 
   /* Preset 3 — 32px / 38px */
   --text-preset-3-size: 32px;
@@ -204,7 +204,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--color-navy-900);
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .profile {
@@ -213,7 +213,7 @@ body {
   align-items: center;
   gap: 1.5rem;
   background-color: var(--color-purple-600);
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 2rem;
   width: 100%;
 }
@@ -246,7 +246,11 @@ body {
   transition: color 0.3s ease;
 }
 
-.profile__list li:hover :active {
+.profile__list li:hover  {
+  color: var(--color-white);
+}
+
+.profile__list .profile__item--active {
   color: var(--color-white);
 }
 
@@ -255,12 +259,14 @@ body {
 /* ==================== */
 
 .report__card {
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding-top: 2rem;
   background-color: var(--color-navy-900);
 }
 .report__card--content > * + * {
   margin-top: 1.5rem;
+ 
+
 }
 
 .report__header {
@@ -306,6 +312,8 @@ body {
   background-size: 60px;
   background-position-x: 95%;
   background-position-y: top;
+  border: 1px solid var(--color-navy-95
+  0);
 }
 .report__card--work {
   background-color: var(--color-orange-300);
@@ -334,7 +342,7 @@ body {
 
 .report__card--content {
   background-color: var(--color-navy-900);
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 2rem;
   height: 100%;
 }
@@ -407,7 +415,7 @@ body {
 
   .page__header {
     grid-column: 1;
-    grid-row: 1/4;
+    grid-row: 1/3;
     height: 100%;
   }
 
@@ -421,6 +429,11 @@ body {
     align-items: flex-start;
     height : 100%;
     gap: 1rem;
+  }
+  
+  .profile__name {
+     max-width: 8rem;
+    font: var(--text-preset-2-size) / var(--text-preset-2-height) var(--font-family-base);
   }
   
   .profile__list {
