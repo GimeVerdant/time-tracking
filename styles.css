@@ -8,12 +8,12 @@
 
   /* White & Black */
   --color-white: #ffffff;
-  --color-black: #000000;
+
 
   /* Navy */
   --color-navy-950: #0e1323;
   --color-navy-900: #1c204b;
-  --color-navy-800: #33397a;
+
   --color-navy-200: #bbc0ff;
 
   /* Orange */
@@ -36,8 +36,7 @@
   /* Yellow */
   --color-yellow-300: #f1c758;
 
-  /* Grey */
-  --color-grey-200: #d8d8d6;
+  
 
   /* ─────────────────────────────────────────
      TYPOGRAPHY — Font Family
@@ -91,12 +90,6 @@
   --text-preset-5m-spacing: 0px;
   --text-preset-5m-weight: var(--font-weight-medium);
 
-  /* Preset 5 Regular — 18px / 21px */
-  --text-preset-5r-size: 18px;
-  --text-preset-5r-height: 21px;
-  --text-preset-5r-spacing: 0px;
-  --text-preset-5r-weight: var(--font-weight-regular);
-
   /* Preset 6 — 15px / 18px */
   --text-preset-6-size: 15px;
   --text-preset-6-height: 18px;
@@ -104,66 +97,6 @@
   --text-preset-6-weight: var(--font-weight-regular);
 }
 
-/* ─────────────────────────────────────────
-   OPTIONAL UTILITY CLASSES
-   (apply the presets via a single class)
-───────────────────────────────────────── */
-
-.text-preset-1 {
-  font-family: var(--font-family-base);
-  font-size: var(--text-preset-1-size);
-  line-height: var(--text-preset-1-height);
-  letter-spacing: var(--text-preset-1-spacing);
-  font-weight: var(--text-preset-1-weight);
-}
-
-.text-preset-2 {
-  font-family: var(--font-family-base);
-  font-size: var(--text-preset-2-size);
-  line-height: var(--text-preset-2-height);
-  letter-spacing: var(--text-preset-2-spacing);
-  font-weight: var(--text-preset-2-weight);
-}
-
-.text-preset-3 {
-  font-family: var(--font-family-base);
-  font-size: var(--text-preset-3-size);
-  line-height: var(--text-preset-3-height);
-  letter-spacing: var(--text-preset-3-spacing);
-  font-weight: var(--text-preset-3-weight);
-}
-
-.text-preset-4 {
-  font-family: var(--font-family-base);
-  font-size: var(--text-preset-4-size);
-  line-height: var(--text-preset-4-height);
-  letter-spacing: var(--text-preset-4-spacing);
-  font-weight: var(--text-preset-4-weight);
-}
-
-.text-preset-5-medium {
-  font-family: var(--font-family-base);
-  font-size: var(--text-preset-5m-size);
-  line-height: var(--text-preset-5m-height);
-  letter-spacing: var(--text-preset-5m-spacing);
-  font-weight: var(--text-preset-5m-weight);
-}
-
-.text-preset-5-regular {
-  font-family: var(--font-family-base);
-  font-size: var(--text-preset-5r-size);
-  line-height: var(--text-preset-5r-height);
-  letter-spacing: var(--text-preset-5r-spacing);
-  font-weight: var(--text-preset-5r-weight);
-}
-
-.text-preset-6 {
-  font-family: var(--font-family-base);
-  font-size: var(--text-preset-6-size);
-  line-height: var(--text-preset-6-height);
-  letter-spacing: var(--text-preset-6-spacing);
-  font-weight: var(--text-preset-6-weight);
-}
 
 /* ==================== */
 /*    BASE STYLES    */
@@ -193,9 +126,9 @@ body {
   gap: 2rem;
   color: var(--color-white);
 }
-.container > * + * {
-  margin-top: 1.5rem;
-}
+
+
+
 /* ==================== */
 /*    Header   (profile + navigation   */
 /* ==================== */
@@ -221,6 +154,18 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.profile__report {
+  font-size: var(--text-preset-6-size);
+  line-height: var(--text-preset-6-height);
+  font-weight: var(--text-preset-6-weight);
+}
+
+.profile__name {
+  font-size: var(--text-preset-4-size);
+  line-height: var(--text-preset-4-height);
+  font-weight: var(--text-preset-4-weight);
 }
 
 .profile__picture {
@@ -263,6 +208,10 @@ body {
   padding-top: 2rem;
   background-color: var(--color-navy-900);
 }
+
+.report__card + .report__card {
+  margin-top: 1.5rem;
+}
 .report__card--content > * + * {
   margin-top: 1.5rem;
  
@@ -277,7 +226,7 @@ body {
 }
 .report__body {
   display: flex;
-  flex-direction: row;
+
   align-items: baseline;
   justify-content: space-between;
   gap: 0.5rem;
@@ -312,8 +261,7 @@ body {
   background-size: 60px;
   background-position-x: 95%;
   background-position-y: top;
-  border: 1px solid var(--color-navy-95
-  0);
+ 
 }
 .report__card--work {
   background-color: var(--color-orange-300);
@@ -351,23 +299,39 @@ body {
 /*   tablet  */
 /* ==================== */
 @media (min-width: 47rem) {
+  .report__card + .report__card {
+    margin-top: 0;
+  }
+
+  .report__current {
+    font-size: var(--text-preset-1-size);
+    line-height: var(--text-preset-1-height);
+    font-weight: var(--text-preset-1-weight);
+  }
+
   .container {
-    max-width: 40rem;
+    width: 100%;
+    max-width: 55rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 1.5rem;
   }
-}
+
 
 
 .report {
   display: contents;
 }
+
+.report__card { 
+    margin-top: 1.5rem;
+}
 .report__body {
   display: flex;
     flex-direction: column;
 }
+
 .page__header {
   grid-column: 1 / -1;
   grid-row: 1;
@@ -399,6 +363,8 @@ body {
   grid-column: 3;
   grid-row: 3;
 }
+}
+
 
 /* ==================== */
 /*   desktop  */
@@ -407,6 +373,7 @@ body {
 @media (min-width: 90rem) {
 
   .container {
+    width: 100%;
     max-width: 70rem;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -432,8 +399,10 @@ body {
   }
   
   .profile__name {
-     max-width: 8rem;
-    font: var(--text-preset-2-size) / var(--text-preset-2-height) var(--font-family-base);
+    max-width: 8rem;
+    font-size: var(--text-preset-2-size);
+    line-height: var(--text-preset-2-height);
+    font-weight: var(--text-preset-2-weight);
   }
   
   .profile__list {
