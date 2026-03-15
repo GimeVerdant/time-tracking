@@ -22,7 +22,7 @@
     />
 
     <link href="./styles.css" rel="stylesheet" />
-     <script type="module" defer src="./main.js"></script>
+    <script type="module" defer src="./main.js"></script>
   </head>
 
   <body>
@@ -42,117 +42,136 @@
           </div>
         </section>
 
-        <nav class="profile__nav">
-          <ul class="profile__list">
-            <li class="profile__item ">Daily</li>
-            <li class="profile__item profile__item--active">Weekly</li>
-            <li class="profile__item">Monthly</li>
+        <nav class="profile__nav" aria-label="Time period">
+          <ul class="profile__list" role="tablist">
+            <li
+              class="profile__item"
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+            >
+              Daily
+            </li>
+            <li
+              class="profile__item profile__item--active"
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+            >
+              Weekly
+            </li>
+            <li
+              class="profile__item"
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+            >
+              Monthly
+            </li>
           </ul>
         </nav>
       </header>
 
-      <section class="report">
+      <section class="report" aria-label="Time tracking statistics">
         <div class="report__card report__card--work">
           <div class="report__card--content">
-          <div class="report__header">
-            <h2 class="report__title">Work</h2>
-            <img
-              src="./images/icon-ellipsis.svg"
-              alt="three dots icon"
-              class="report__icon"
-            />
-          </div>
-          <div class="report__body">
-            <p class="report__current">5hrs</p>
-            <p class="report__previous">Previous - 7hrs</p>
-          </div>
+            <div class="report__header">
+              <h2 class="report__title">Work</h2>
+              <img
+                src="./images/icon-ellipsis.svg"
+                alt=""
+                class="report__icon"
+              />
+            </div>
+            <div class="report__body">
+              <p class="report__current">5hrs</p>
+              <p class="report__previous">Previous - 7hrs</p>
+            </div>
           </div>
         </div>
 
         <div class="report__card report__card--play">
           <div class="report__card--content">
-          <div class="report__header">
-            <h2 class="report__title">Play</h2>
-            <img
-              src="./images/icon-ellipsis.svg"
-              alt="three dots icon"
-              class="report__icon"
-            />
-          </div>
-          <div class="report__body">
-            <p class="report__current">1hr</p>
-            <p class="report__previous">Previous - 2hrs</p>
-          </div>
+            <div class="report__header">
+              <h2 class="report__title">Play</h2>
+              <img
+                src="./images/icon-ellipsis.svg"
+                alt=""
+                class="report__icon"
+              />
+            </div>
+            <div class="report__body">
+              <p class="report__current">1hr</p>
+              <p class="report__previous">Previous - 2hrs</p>
+            </div>
           </div>
         </div>
 
         <div class="report__card report__card--study">
           <div class="report__card--content">
-          <div class="report__header">
-            <h2 class="report__title">Study</h2>
-            <img
-              src="./images/icon-ellipsis.svg"
-              alt="three dots icon"
-              class="report__icon"
-            />
-          </div>
-          <div class="report__body">
-            <p class="report__current">0hrs</p>
-            <p class="report__previous">Previous - 1hr</p>
-          </div>
+            <div class="report__header">
+              <h2 class="report__title">Study</h2>
+              <img
+                src="./images/icon-ellipsis.svg"
+                alt=""
+                class="report__icon"
+              />
+            </div>
+            <div class="report__body">
+              <p class="report__current">0hrs</p>
+              <p class="report__previous">Previous - 1hr</p>
+            </div>
           </div>
         </div>
 
         <div class="report__card report__card--exercise">
           <div class="report__card--content">
-          <div class="report__header">
-            <h2 class="report__title">Exercise</h2>
-            <img
-              src="./images/icon-ellipsis.svg"
-              alt="three dots icon"
-              class="report__icon"
-            />
-          </div>
-          <div class="report__body">
-            <p class="report__current">1hr</p>
-            <p class="report__previous">Previous - 1hr</p>
-          </div>
-          </div>
+            <div class="report__header">
+              <h2 class="report__title">Exercise</h2>
+              <img
+                src="./images/icon-ellipsis.svg"
+                alt=""
+                class="report__icon"
+              />
+            </div>
+            <div class="report__body">
+              <p class="report__current">1hr</p>
+              <p class="report__previous">Previous - 1hr</p>
+            </div>
           </div>
         </div>
 
         <div class="report__card report__card--social">
           <div class="report__card--content">
-          <div class="report__header">
-            <h2 class="report__title">Social</h2>
-            <img
-              src="./images/icon-ellipsis.svg"
-              alt="three dots icon"
-              class="report__icon"
-            />
+            <div class="report__header">
+              <h2 class="report__title">Social</h2>
+              <img
+                src="./images/icon-ellipsis.svg"
+                alt=""
+                class="report__icon"
+              />
+            </div>
+            <div class="report__body">
+              <p class="report__current">1hr</p>
+              <p class="report__previous">Previous - 3hrs</p>
+            </div>
           </div>
-          <div class="report__body">
-            <p class="report__current">1hr</p>
-            <p class="report__previous">Previous - 3hrs</p>
-          </div>
-          </div>
-          
         </div>
 
         <div class="report__card report__card--self-care">
           <div class="report__card--content">
-          <div class="report__header">
-            <h2 class="report__title">Self Care</h2>
-            <img
-              src="./images/icon-ellipsis.svg"
-              alt="three dots icon"
-              class="report__icon"
-            />
-          </div>
-          <div class="report__body">
-            <p class="report__current">0hrs</p>
-            <p class="report__previous">Previous - 1hr</p>
-          </div>
+            <div class="report__header">
+              <h2 class="report__title">Self Care</h2>
+              <img
+                src="./images/icon-ellipsis.svg"
+                alt=""
+                class="report__icon"
+              />
+            </div>
+            <div class="report__body">
+              <p class="report__current">0hrs</p>
+              <p class="report__previous">Previous - 1hr</p>
+            </div>
           </div>
         </div>
       </section>
