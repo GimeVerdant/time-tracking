@@ -45,26 +45,32 @@
         <nav class="profile__nav" aria-label="Time period">
           <ul class="profile__list" role="tablist">
             <li
+              id="tab-daily"
               class="profile__item"
               role="tab"
               tabindex="-1"
               aria-selected="false"
+              aria-controls="report-panel"
             >
               Daily
             </li>
             <li
+              id="tab-weekly"
               class="profile__item profile__item--active"
               role="tab"
               tabindex="0"
               aria-selected="true"
+              aria-controls="report-panel"
             >
               Weekly
             </li>
             <li
+              id="tab-monthly"
               class="profile__item"
               role="tab"
               tabindex="-1"
               aria-selected="false"
+              aria-controls="report-panel"
             >
               Monthly
             </li>
@@ -72,7 +78,7 @@
         </nav>
       </header>
 
-      <section class="report" aria-label="Time tracking statistics">
+      <section id="report-panel" class="report" role="tabpanel" tabindex="0" aria-labelledby="tab-weekly">
         <div class="report__card report__card--work">
           <div class="report__card--content">
             <div class="report__header">
