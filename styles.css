@@ -111,6 +111,18 @@ body {
   justify-content: center;
 }
 
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+} 
+
 /* Mobile */
 
 .container {
@@ -133,6 +145,7 @@ body {
   background-color: var(--color-navy-900);
   border-radius: 1rem;
 }
+
 
 .profile {
   display: flex;
@@ -201,7 +214,6 @@ body {
   border-radius: 1rem;
   padding-top: 2rem;
   overflow: hidden;
-  background-color: var(--color-navy-900);
   background-repeat: no-repeat;
   background-size: 60px;
   background-position-x: 95%;
