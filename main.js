@@ -18,23 +18,17 @@ fetch('./data.json')
     updateCards('weekly')
 
     // Update data on click
-    document.querySelectorAll('.profile__tab').forEach(button => {
-      button.addEventListener('click', () => {
-        const timeframe = button.textContent.trim().toLowerCase()
-
-        // Reset all tabs
-        document.querySelectorAll('.profile__tab').forEach(b => {
-          b.setAttribute('aria-selected', 'false')
-          b.setAttribute('tabindex', '-1')
-          b.closest('.profile__item').classList.remove('profile__item--active')
+    document.querySelectorAll('.profile__item').forEach(item => {
+      item.addEventListener('click', () => {
+        const timeframe = item.textContent.trim().toLowerCase()
+        document.querySelectorAll('.profile__item').forEach(i => {
+          i.classList.remove('profile__item--active')
+          i.setAttribute('aria-selected', 'false')
+          i.setAttribute('tabindex', '-1')
         })
-
-        // Set active tab
-        button.setAttribute('aria-selected', 'true')
-        button.setAttribute('tabindex', '0')
-        button.closest('.profile__item').classList.add('profile__item--active')
-
-        // Update panel label and card data
+        item.classList.add('profile__item--active')
+        item.setAttribute('aria-selected', 'true')
+        item.setAttribute('tabindex', '0')
         document.getElementById('report-panel').setAttribute('aria-labelledby', `tab-${timeframe}`)
         updateCards(timeframe)
       })

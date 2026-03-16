@@ -44,38 +44,35 @@
 
         <nav class="profile__nav" aria-label="Time period">
           <ul class="profile__list" role="tablist">
-            <li class="profile__item">
+            <li class="profile__item" role="none">
               <button
-                id="tab-daily"
                 class="profile__tab"
                 role="tab"
                 aria-selected="false"
-                aria-controls="report-panel"
                 tabindex="-1"
+                id="tab-daily"
               >
                 Daily
               </button>
             </li>
-            <li class="profile__item profile__item--active">
+            <li class="profile__item profile__item--active" role="none">
               <button
-                id="tab-weekly"
                 class="profile__tab"
                 role="tab"
-                aria-selected="true"
-                aria-controls="report-panel"
                 tabindex="0"
+                id="tab-weekly"
               >
                 Weekly
               </button>
             </li>
-            <li class="profile__item">
+            <li class="profile__item" role="none">
               <button
-                id="tab-monthly"
                 class="profile__tab"
+                id="tab-monthly"
                 role="tab"
+                tabindex="-1"
                 aria-selected="false"
                 aria-controls="report-panel"
-                tabindex="-1"
               >
                 Monthly
               </button>
@@ -94,7 +91,7 @@
         <article class="report__card report__card--work">
           <div class="report__card--content">
             <header class="report__header">
-              <h2 class="report__title">Work</h2>
+              <h3 class="report__title">Work</h3>
               <img src="./images/icon-ellipsis.svg" alt="" class="report__icon" />
             </header>
             <div class="report__body">
@@ -107,7 +104,7 @@
         <article class="report__card report__card--play">
           <div class="report__card--content">
             <header class="report__header">
-              <h2 class="report__title">Play</h2>
+              <h3 class="report__title">Play</h3>
               <img src="./images/icon-ellipsis.svg" alt="" class="report__icon" />
             </header>
             <div class="report__body">
@@ -120,7 +117,7 @@
         <article class="report__card report__card--study">
           <div class="report__card--content">
             <header class="report__header">
-              <h2 class="report__title">Study</h2>
+              <h3 class="report__title">Study</h3>
               <img src="./images/icon-ellipsis.svg" alt="" class="report__icon" />
             </header>
             <div class="report__body">
@@ -133,7 +130,7 @@
         <article class="report__card report__card--exercise">
           <div class="report__card--content">
             <header class="report__header">
-              <h2 class="report__title">Exercise</h2>
+              <h3 class="report__title">Exercise</h3>
               <img src="./images/icon-ellipsis.svg" alt="" class="report__icon" />
             </header>
             <div class="report__body">
@@ -146,7 +143,7 @@
         <article class="report__card report__card--social">
           <div class="report__card--content">
             <header class="report__header">
-              <h2 class="report__title">Social</h2>
+              <h3 class="report__title">Social</h3>
               <img src="./images/icon-ellipsis.svg" alt="" class="report__icon" />
             </header>
             <div class="report__body">
@@ -159,7 +156,7 @@
         <article class="report__card report__card--self-care">
           <div class="report__card--content">
             <header class="report__header">
-              <h2 class="report__title">Self Care</h2>
+              <h3 class="report__title">Self Care</h3>
               <img src="./images/icon-ellipsis.svg" alt="" class="report__icon" />
             </header>
             <div class="report__body">
