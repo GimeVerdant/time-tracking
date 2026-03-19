@@ -9,8 +9,9 @@ fetch('./data.json')
       data.forEach(activity => {
         const cardClass = activity.title.toLowerCase().replaceAll(' ', '-')
         const card = document.querySelector(`.report__card--${cardClass}`)
+        const previousLabels = { daily: 'Yesterday', weekly: 'Last Week', monthly: 'Last Month' }
         card.querySelector('.report__current').textContent = `${activity.timeframes[timeframe].current}hrs`
-        card.querySelector('.report__previous').textContent = `Previous - ${activity.timeframes[timeframe].previous}hrs`
+        card.querySelector('.report__previous').textContent = `${previousLabels[timeframe]} - ${activity.timeframes[timeframe].previous}hrs`
       })
     }
 
